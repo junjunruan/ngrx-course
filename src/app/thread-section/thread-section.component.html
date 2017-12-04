@@ -1,3 +1,8 @@
-<p>
-  thread-section works!
-</p>
+<div class="thread-section">
+  <div class="thread-count">
+    <span><h3>User: {{userName$ | async}}</h3></span>
+    <span><h3>Unread message: {{unreadMessageCounter$ | async}}</h3></span>
+  </div>
+
+  <thread-list [threads]="threadsSummaries$ | async"></thread-list>
+</div>
